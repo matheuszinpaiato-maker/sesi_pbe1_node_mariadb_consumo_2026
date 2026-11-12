@@ -1,0 +1,194 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2026-11-12T12:44:14.434Z",
+  "__export_source": "Otimizador StatTrak v1.0",
+  "resources": [
+    {
+      "_id": "wrk_statTrakWorkspace",
+      "parentId": null,
+      "modified": 1794487454433,
+      "created": 1794487454433,
+      "name": "API gestao_residuos - StatTrak",
+      "description": "Coleção gerada automaticamente pelo Otimizador StatTrak",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "fld_usuario_0",
+      "parentId": "wrk_statTrakWorkspace",
+      "modified": 1794487454434,
+      "created": 1794487454434,
+      "name": "USUARIO",
+      "description": "Rotas CRUD para a tabela usuario",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_get_usuario",
+      "parentId": "fld_usuario_0",
+      "modified": 1794487454434,
+      "created": 1794487454434,
+      "url": "http://localhost:3000/usuario",
+      "name": "Listar usuario",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1,
+      "_type": "request"
+    },
+    {
+      "_id": "req_post_usuario",
+      "parentId": "fld_usuario_0",
+      "modified": 1794487454434,
+      "created": 1794487454434,
+      "url": "http://localhost:3000/usuario",
+      "name": "Criar usuario",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"nome\": \"valor_exemplo\",\n  \"email\": \"valor_exemplo\",\n  \"senha\": \"valor_exemplo\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -2,
+      "_type": "request"
+    },
+    {
+      "_id": "req_put_usuario",
+      "parentId": "fld_usuario_0",
+      "modified": 1794487454434,
+      "created": 1794487454434,
+      "url": "http://localhost:3000/usuario/1",
+      "name": "Atualizar usuario",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"nome\": \"valor_exemplo\",\n  \"email\": \"valor_exemplo\",\n  \"senha\": \"valor_exemplo\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -3,
+      "_type": "request"
+    },
+    {
+      "_id": "req_del_usuario",
+      "parentId": "fld_usuario_0",
+      "modified": 1794487454434,
+      "created": 1794487454434,
+      "url": "http://localhost:3000/usuario/1",
+      "name": "Deletar usuario",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -4,
+      "_type": "request"
+    },
+    {
+      "_id": "fld_consumo_1",
+      "parentId": "wrk_statTrakWorkspace",
+      "modified": 1794487454434,
+      "created": 1794487454434,
+      "name": "CONSUMO",
+      "description": "Rotas CRUD para a tabela consumo",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -2000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_get_consumo",
+      "parentId": "fld_consumo_1",
+      "modified": 1794487454434,
+      "created": 1794487454434,
+      "url": "http://localhost:3000/consumo",
+      "name": "Listar consumo",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1,
+      "_type": "request"
+    },
+    {
+      "_id": "req_post_consumo",
+      "parentId": "fld_consumo_1",
+      "modified": 1794487454434,
+      "created": 1794487454434,
+      "url": "http://localhost:3000/consumo",
+      "name": "Criar consumo",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"2\": \"valor_exemplo\",\n  \"usuarioId\": \"valor_exemplo\",\n  \"local\": \"valor_exemplo\",\n  \"equipamento\": \"valor_exemplo\",\n  \"consumoKwh\": \"valor_exemplo\",\n  \"mesReferencia\": \"valor_exemplo\",\n  \"status\": \"valor_exemplo\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -2,
+      "_type": "request"
+    },
+    {
+      "_id": "req_put_consumo",
+      "parentId": "fld_consumo_1",
+      "modified": 1794487454434,
+      "created": 1794487454434,
+      "url": "http://localhost:3000/consumo/1",
+      "name": "Atualizar consumo",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"2\": \"valor_exemplo\",\n  \"usuarioId\": \"valor_exemplo\",\n  \"local\": \"valor_exemplo\",\n  \"equipamento\": \"valor_exemplo\",\n  \"consumoKwh\": \"valor_exemplo\",\n  \"mesReferencia\": \"valor_exemplo\",\n  \"status\": \"valor_exemplo\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -3,
+      "_type": "request"
+    },
+    {
+      "_id": "req_del_consumo",
+      "parentId": "fld_consumo_1",
+      "modified": 1794487454434,
+      "created": 1794487454434,
+      "url": "http://localhost:3000/consumo/1",
+      "name": "Deletar consumo",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -4,
+      "_type": "request"
+    }
+  ]
+}
