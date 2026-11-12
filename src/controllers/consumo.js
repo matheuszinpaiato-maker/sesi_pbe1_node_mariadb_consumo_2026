@@ -13,7 +13,7 @@ const criar = async (req, res) => {
   const { usuarioId, local, equipamento, consumoKwh, mesReferencia, status } = req.body;
   try {
     const [result] = await db.query(
-      'INSERT INTO consumo (usuarioId, local, equipamento, consumoKwh, 2, mesReferencia, status) VALUES (?, ?, ?, ?, ?, ?, ?)',
+      'INSERT INTO consumo (usuarioId, local, equipamento, consumoKwh, mesReferencia, status) VALUES (?, ?, ?, ?, ?, ?)',
       [usuarioId, local, equipamento, consumoKwh, mesReferencia, status]
     );
     res.status(201).json({ id: result.insertId, ...req.body });

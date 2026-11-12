@@ -1,5 +1,25 @@
 const db = require('../db');
 
+const login = async (req, res) => {
+    const { email, senha } = req.body;
+
+    const sql = 'SELECT id, nome, email FROM usuario WHERE email = ? AND senha = password(?);';
+
+    try {
+        const [results] = await db.query(sql, [email, senha]);
+
+        if (results.length == 0) {
+            return res.status(404).json("Acesso negado, credenciais inválidas");
+        }
+
+        res.json(results);
+
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ erro: 'Erro ao realizar login' });
+    }
+}
+
 const listar = async (req, res) => {
   try {
     const [rows] = await db.query('SELECT * FROM usuario');
@@ -46,4 +66,4 @@ const deletar = async (req, res) => {
   }
 };
 
-module.exports = { listar, criar, atualizar, deletar };
+module.exports = { login, listar, criar, atualizar, deletar };

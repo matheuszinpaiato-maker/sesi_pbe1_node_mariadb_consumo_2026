@@ -3,6 +3,7 @@ const router = express.Router();
 const usuarioController = require('./controllers/usuario');
 const consumoController = require('./controllers/consumo');
 
+router.get('/usuario/login', usuarioController.login);
 router.get('/usuario', usuarioController.listar);
 router.post('/usuario', usuarioController.criar);
 router.put('/usuario/:id', usuarioController.atualizar);
